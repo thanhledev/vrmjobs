@@ -1,4 +1,5 @@
 from .worker_info import WorkerInfo
+from .vrm_type import VrmType
 
 class ProbeAck(object):
     """
@@ -6,12 +7,13 @@ class ProbeAck(object):
     and reply back to collector host using information provided
     in probe_init packet
     """
-    def __init__(self, packet_id: str, info: 'WorkerInfo'):
+    def __init__(self, packet_id: str, info: 'WorkerInfo', packet_type: 'VrmType'):
         self.id = packet_id
         self.info = info
+        self.type = packet_type
 
     def __str__(self):
-        return "{} - {}".format(id, str(self.info))
+        return "[{}] {} - {}".format(str(self.type), id, str(self.info))
 
     def __repr__(self):
         return "{}({} - {})".format(self.__class__.__name__,
