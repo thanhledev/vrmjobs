@@ -1,5 +1,5 @@
 from .port_info import PortInfo
-from typing import List
+from typing import List, Dict
 
 class WorkerInfo(object):
     """
@@ -21,3 +21,11 @@ class WorkerInfo(object):
                                                self.hostname,
                                                self.inet_addr,
                                                str(self.ports))
+
+    def daemon_fqinfo(self) -> List[Dict]:
+        daemons = []
+        for info in self.ports:
+            daemons.append({'daemon': info.daemon,
+                           'fqinfo': (self.inet_addr, info.port)})
+
+        return daemons

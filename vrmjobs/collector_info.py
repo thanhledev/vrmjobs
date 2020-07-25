@@ -1,5 +1,5 @@
 from .port_info import PortInfo
-from typing import List
+from typing import List, Dict
 
 class CollectorInfo(object):
     """
@@ -15,3 +15,11 @@ class CollectorInfo(object):
 
     def __repr__(self):
         return "{}({}:{})".format(self.__class__.__name__, self.inet_addr, self.ports)
+
+    def daemon_fqinfo(self) -> List[Dict]:
+        daemons = []
+        for info in self.ports:
+            daemons.append({'daemon': info.daemon,
+                            'fqinfo': (self.inet_addr, info.port)})
+
+        return daemons
