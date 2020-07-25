@@ -20,6 +20,6 @@ class CollectorInfo(object):
         daemons = []
         for info in self.ports:
             daemons.append({'daemon': info.daemon,
-                            'fqinfo': (self.inet_addr, info.port)})
+                            'fq_info': (self.inet_addr, info.port)})
 
         return daemons

@@ -23,6 +23,6 @@ class MetricInfo(object):
         metrics = []
         for info in self.ports:
             metrics.append({'job': info.daemon,
-                            'targets': "{}:{}".format(self.inet_addr, info.port)})
+                            'target': "{}:{}".format(self.inet_addr, info.port)})
 
         return metrics
