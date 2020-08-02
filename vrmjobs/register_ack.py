@@ -1,13 +1,14 @@
-from .host_info import HostInfo
+from .register_info import RegisterInfo
 from .vrm_type import VrmType
 
-class ProbeAck(object):
+class RegisterAck(object):
     """
     System job that will be encapsulated inside an UDP packet
-    and reply back to collector host using information provided
-    in probe_init packet by worker host
+    and send to the worker host after the collector host tried
+    to initialize the metric exporters of that worker using
+    provided REST-api
     """
-    def __init__(self, packet_id: str, info: 'HostInfo', packet_type: 'VrmType'):
+    def __init__(self, packet_id: str, info: 'RegisterInfo' , packet_type: 'VrmType'):
         self.id = packet_id
         self.info = info
         self.type = packet_type
