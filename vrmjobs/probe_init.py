@@ -3,7 +3,7 @@ from .vrm_type import VrmType
 
 class ProbeInit(object):
     """
-    System packet that will be encapsulated inside an UDP packet
+    System job that will be encapsulated inside an UDP packet
     and broadcast to all worker hosts inside a single network segment
     by a collector host
     """
