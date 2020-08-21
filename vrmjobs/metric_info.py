@@ -1,11 +1,13 @@
 from .port_info import PortInfo
 from typing import List, Dict
 
+
 class MetricInfo(object):
     """
     Define structure of the information of the metric exporter
     running in a worker host
     """
+
     def __init__(self, hostname: str, inet_addr: str, ports: List[PortInfo]):
         self.hostname = hostname
         self.inet_addr = inet_addr

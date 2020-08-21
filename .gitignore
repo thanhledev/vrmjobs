@@ -89,3 +89,6 @@ ENV/
 .ropeproject
 *.npy
 *.pkl
+
+# IDE pycharm
+.idea/

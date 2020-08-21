@@ -1,5 +1,6 @@
 import enum
 
+
 @enum.unique
 class VrmType(enum.Enum):
     PROBE_INIT = 1

@@ -14,7 +14,7 @@ URL = 'https://github.com/thanhledev/vrmjobs'
 EMAIL = 'thanhledev@gmail.com'
 AUTHOR = 'Thanh Le'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '2.0.3'
+VERSION = '2.1.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = []
@@ -40,6 +40,7 @@ if not VERSION:
         exec(f.read(), about)
 else:
     about['__version__'] = VERSION
+
 
 class UploadCommand(Command):
     """Support setup.py upload."""
@@ -76,6 +77,7 @@ class UploadCommand(Command):
         os.system('git push --tags')
 
         sys.exit()
+
 
 # Where the magic happens:
 setup(
