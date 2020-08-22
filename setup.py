@@ -14,7 +14,7 @@ URL = 'https://github.com/thanhledev/vrmjobs'
 EMAIL = 'thanhledev@gmail.com'
 AUTHOR = 'Thanh Le'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '2.1.1'
+VERSION = '2.1.2'
 
 # What packages are required for this module to be executed?
 REQUIRED = []
