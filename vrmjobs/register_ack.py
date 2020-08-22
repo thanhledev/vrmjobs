@@ -9,7 +9,6 @@ class RegisterAck(object):
     to initialize the metric exporters of that worker using
     provided REST-api
     """
-
     def __init__(self, packet_id: str, info: 'RegisterInfo', packet_type: 'VrmType'):
         self.id = packet_id
         self.info = info

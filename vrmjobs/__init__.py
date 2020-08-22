@@ -14,3 +14,4 @@ from .query_info import QueryInfo
 from .probe_ack import ProbeAck
 from .probe_init import ProbeInit
 from .register_ack import RegisterAck
+from .query_ack import QueryAck

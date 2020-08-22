@@ -3,5 +3,7 @@
 List of system jobs encapsulated in UDP packets which will be exchanged
 between worker and coordinator hosts inside an SDN environment.
 
-- ProbeInit: sent by coordinator host.
-- ProbeAck: sent by worker host.
+- ProbeInit: sent by collector host (in a fix-interval manner).
+- ProbeAck: sent by worker & monitor host (reply to ProbeInit).
+- RegisterInfo:
+- RegisterAck:
