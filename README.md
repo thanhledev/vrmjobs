@@ -7,3 +7,7 @@ between worker and coordinator hosts inside an SDN environment.
 - ProbeAck: sent by worker & monitor host (reply to ProbeInit).
 - RegisterInfo:
 - RegisterAck:
+
+#### Versions:
+- `2.1.x`: with QueryAck
+- `3.x.x`: without QueryAck
