@@ -2,6 +2,7 @@ from vrmjobs import *
 import jsonpickle
 
 if __name__ == '__main__':
+    node_cpu_filter_info = FilterInfo('cpu', [{'field_name': 'mode', 'field_value': 'idle', 'regex': '='}])
     node_disk_filter_info = FilterInfo('disk', [{'field_name': 'mounpoint', 'field_value': '/', 'regex': '='}])
     node_disk_io_filter_info = FilterInfo('disk_io',
                                           [{'field_name': 'device', 'field_value': '^.*sda.*$', 'regex': '=~'}])
