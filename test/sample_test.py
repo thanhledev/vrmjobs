@@ -1,5 +1,6 @@
 from vrmjobs import *
 import jsonpickle
+from uuid import uuid4
 
 if __name__ == '__main__':
     node_cpu_filter_info = FilterInfo('cpu', [{'field_name': 'mode', 'field_value': 'idle', 'regex': '='}])
@@ -19,3 +20,9 @@ if __name__ == '__main__':
     worker1 = HostInfo('worker1', '192.168.178.156',
                        [PortInfo('workerd', 10500)],
                        HostType.WORKER)
+
+    report = ReportInit('influx_report', 'host_cpu_usage', ['hostname=worker1', 'instance=192.168.178.146'],
+                        ['avg_cpu=35.3453'], 1598559679)
+
+    data = jsonpickle.encode(report, unpicklable=False)
+    print('{} -> length: {} bytes'.format(data, str(len(data))))

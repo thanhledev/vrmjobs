@@ -13,3 +13,4 @@ from .filter_info import FilterInfo
 from .probe_ack import ProbeAck
 from .probe_init import ProbeInit
 from .register_ack import RegisterAck
+from .report_init import ReportInit
